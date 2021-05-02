@@ -1,4 +1,9 @@
 import './sass/main.scss';
+import menuItemTpl from './templates/menu-item.hbs';
+import menuItems from './menu.json';
+
+console.log(menuItemTpl(menuItems));
+console.log(menuItems);
 
 const Theme = {
     LIGHT: 'light-theme',
