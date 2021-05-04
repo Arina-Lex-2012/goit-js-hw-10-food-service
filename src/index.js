@@ -2,9 +2,7 @@ import './sass/main.scss';
 import menuItemTpl from './templates/menu-item.hbs';
 import menuItems from './menu.json';
 
-console.log(menuItemTpl(menuItems));
-console.log(menuItems);
-
+// изменение темы
 const Theme = {
     LIGHT: 'light-theme',
     DARK: 'dark-theme',
@@ -29,6 +27,23 @@ function onChange(event){
         localStorage.setItem('theme', Theme.LIGHT);
     }; 
 };
+
+
+// создание шаблона и наполнение меню
+const menuItemsEl = document.querySelector('.js-menu');
+const menuMarkup = createMenuItems(menuItems);
+
+menuItemsEl.insertAdjacentHTML('beforeend', menuMarkup);
+
+function createMenuItems(menuItems){
+    // return menuItems.map(menuItem => menuItemTpl(menuItem)).join('');
+    return menuItems.map(menuItemTpl).join('');
+};
+
+
+// console.log(menuMarkup);
+
+
 
 
 
