@@ -41,9 +41,6 @@ function createMenuItems(menuItems){
 };
 
 
-// console.log(menuMarkup);
-
-
 
 
 
